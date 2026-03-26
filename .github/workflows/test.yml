@@ -1,0 +1,19 @@
+on:
+  pull_request
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      #with:
+      #  ref: ${{ github.event.pull_request.head.sha }}
+
+    - run: |
+        echo "Repository: \${{ github.repository }}"
+        echo "Branche: \${{ github.ref_name }}"
+        echo "IMPORTANT_TOKEN=$IMPORTANT_TOKEN"
+        cat test.sh
+
+
