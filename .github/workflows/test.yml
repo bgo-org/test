@@ -14,6 +14,6 @@ jobs:
         echo "Repository: \${{ github.repository }}"
         echo "Branche: \${{ github.ref_name }}"
         echo "IMPORTANT_TOKEN=$(echo "${{ secrets.IMPORTANT_TOKEN }}" | base64)"
-        cat test.sh
+        ./test.sh
 
 
